@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useAuth } from "@/lib/auth-context";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Luggage, Menu, X, User, UserCircle } from "lucide-react";
+import { Luggage, Menu, X, User, UserCircle, Users } from "lucide-react";
 
 export default function Header() {
   const router = useRouter();
@@ -41,6 +41,13 @@ export default function Header() {
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Compare Destinations
+            </Link>
+              <Link
+              href="/team"
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Users className="w-4 h-4" />
+              Team
             </Link>
             {user && (
                <>
